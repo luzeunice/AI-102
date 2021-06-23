@@ -22,7 +22,7 @@ namespace LUISModulo5
         }
 
         private async static void GetPrediction(LUISRuntimeClient cliente, string mensaje) {
-            var kbLUIS = "30018600-f54e-46ce-a650-954172c06484";
+            var kbLUIS = "7b9ac21c-c89c-4e86-88f4-8e1d0c4eb5a9";
             var request = new PredictionRequest { 
               Query= mensaje
             };
@@ -32,7 +32,7 @@ namespace LUISModulo5
                 case "EnviaCorreo":
                     Console.WriteLine("La intención es enviar correo");
                     var entities = prediction.Entities;
-                    var correo = entities["Correo"];
+                    var correo = entities["correo"];
                     Console.WriteLine($"Enviando correo a {((JArray)correo)[0]}");
                     break;
                 default:

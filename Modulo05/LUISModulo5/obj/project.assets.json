@@ -5261,19 +5261,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\40024436\\.nuget\\packages\\": {}
+    "C:\\Users\\luz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TrabajoProyectos\\AI-102Proyects\\LUISModulo5\\LUISModulo5\\LUISModulo5.csproj",
+      "projectUniqueName": "C:\\Users\\luz\\Documents\\GitHub\\AI-102\\Modulo05\\LUISModulo5\\LUISModulo5.csproj",
       "projectName": "LUISModulo5",
-      "projectPath": "D:\\TrabajoProyectos\\AI-102Proyects\\LUISModulo5\\LUISModulo5\\LUISModulo5.csproj",
-      "packagesPath": "C:\\Users\\40024436\\.nuget\\packages\\",
-      "outputPath": "D:\\TrabajoProyectos\\AI-102Proyects\\LUISModulo5\\LUISModulo5\\obj\\",
+      "projectPath": "C:\\Users\\luz\\Documents\\GitHub\\AI-102\\Modulo05\\LUISModulo5\\LUISModulo5.csproj",
+      "packagesPath": "C:\\Users\\luz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\luz\\Documents\\GitHub\\AI-102\\Modulo05\\LUISModulo5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\40024436\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\luz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5285,6 +5285,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -5296,6 +5297,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime": {
             "target": "Package",
@@ -5317,7 +5319,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

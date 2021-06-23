@@ -7,7 +7,7 @@ namespace LUISModulo5.luis
 {
     class LuisClient
     {
-        private static readonly string API_KEY = "3882d2f2b4f1498ca6312471721d0a00";
+        private static readonly string API_KEY = "9bd534ea07e443768aea757766687a55";
         private static readonly string ENDPOINT = "https://westus.api.cognitive.microsoft.com/";
 
         public static LUISRuntimeClient Cliente { get; private set; }
