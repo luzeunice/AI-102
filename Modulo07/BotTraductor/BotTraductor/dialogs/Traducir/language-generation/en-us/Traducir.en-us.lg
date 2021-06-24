@@ -1,0 +1,41 @@
+[import](common.lg)
+
+# SendActivity_NAvb8Q()
+[Activity
+    Text = Es hora de traducir =)
+]
+
+# TextInput_Prompt_ZqAHxq()
+[Activity
+    Text = Escribe el idio que quieres traducir (ISO 6391)
+]
+
+# TextInput_InvalidPrompt_ZqAHxq()
+[Activity
+    Text = Parametro Incorrecto. Usa ISO6391 Ejemplo: es ( Español ) en ( English) fr( Frances) 
+]
+
+# SendActivity_FNnMPK()
+[Activity
+    Text = Cancelar
+]
+
+# SendActivity_NGvIJx()
+[Activity
+    Text = El idioma a tradicir es: ${user.idioma}
+]
+
+# TextInput_Prompt_8NdzLg()
+[Activity
+    Text = ¿ Que texto voy a traducir?
+]
+
+# SendActivity_EwTYvD()
+[Activity
+    Text = ${dialog.resultado}
+]
+
+# SendActivity_VY6qu2()
+[Activity
+    Text = Traducción:  ${user.traduccion}
+]

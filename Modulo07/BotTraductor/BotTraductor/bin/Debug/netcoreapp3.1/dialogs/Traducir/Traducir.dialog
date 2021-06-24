@@ -1,0 +1,177 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "b9rXKh",
+    "name": "Traducir",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "W0TN6t"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.DeleteProperties",
+          "$designer": {
+            "id": "Kua0RW"
+          },
+          "properties": [
+            "user.idioma"
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "NAvb8Q"
+          },
+          "activity": "${SendActivity_NAvb8Q()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "ZqAHxq"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "prompt": "${TextInput_Prompt_ZqAHxq()}",
+          "property": "user.idioma",
+          "outputFormat": "=toLower(this.value)",
+          "validations": [
+            "length(this.value)==2"
+          ],
+          "invalidPrompt": "${TextInput_InvalidPrompt_ZqAHxq()}",
+          "defaultValue": "en"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "NGvIJx"
+          },
+          "activity": "${SendActivity_NGvIJx()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "8NdzLg"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_8NdzLg()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "user.texto"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "J9ECwV"
+          },
+          "resultProperty": "dialog.resultado",
+          "method": "POST",
+          "url": "https://translatorleao.cognitiveservices.azure.com/translator/text/v3.0/translate?to=${user.idioma}",
+          "headers": {
+            "Ocp-Apim-Subscription-Key": "b5faa60dbf5e4498b188ae738e3fe6a6",
+            "Ocp-Apim-Subscription-Region": "eastus",
+            "Content-Type": "application/json"
+          },
+          "body": [
+            {
+              "Text": "${user.texto}"
+            }
+          ],
+          "responseType": "json",
+          "contentType": "application/json"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "EwTYvD"
+          },
+          "activity": "${SendActivity_EwTYvD()}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "rTGeaJ"
+          },
+          "condition": "=dialog.resultado.statusCode==200",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "3pcngp"
+              },
+              "assignments": [
+                {
+                  "value": "=dialog.resultado.content[0].translations[0].text",
+                  "property": "user.traduccion"
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "VY6qu2"
+              },
+              "activity": "${SendActivity_VY6qu2()}",
+              "disabled": true
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "LHCDYK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "lc9t8H",
+        "name": "Cancelar"
+      },
+      "intent": "Cancelar",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "FNnMPK"
+          },
+          "activity": "${SendActivity_FNnMPK()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "5rZ6oe"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "Traducir.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "Cancelar",
+        "pattern": "Cancelar"
+      }
+    ]
+  },
+  "id": "Traducir"
+}
