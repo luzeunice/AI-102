@@ -5263,19 +5263,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\40024436\\.nuget\\packages\\": {}
+    "C:\\Users\\luz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TrabajoProyectos\\AI-102Proyects\\ComputerModulo8\\ComputerModulo8\\ComputerModulo8.csproj",
+      "projectUniqueName": "C:\\Users\\luz\\Documents\\GitHub\\AI-102\\Modulo08\\ComputerModulo8\\ComputerModulo8.csproj",
       "projectName": "ComputerModulo8",
-      "projectPath": "D:\\TrabajoProyectos\\AI-102Proyects\\ComputerModulo8\\ComputerModulo8\\ComputerModulo8.csproj",
-      "packagesPath": "C:\\Users\\40024436\\.nuget\\packages\\",
-      "outputPath": "D:\\TrabajoProyectos\\AI-102Proyects\\ComputerModulo8\\ComputerModulo8\\obj\\",
+      "projectPath": "C:\\Users\\luz\\Documents\\GitHub\\AI-102\\Modulo08\\ComputerModulo8\\ComputerModulo8.csproj",
+      "packagesPath": "C:\\Users\\luz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\luz\\Documents\\GitHub\\AI-102\\Modulo08\\ComputerModulo8\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\40024436\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\luz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5287,6 +5287,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -5298,6 +5299,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.Azure.CognitiveServices.Vision.ComputerVision": {
             "target": "Package",
@@ -5319,7 +5321,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

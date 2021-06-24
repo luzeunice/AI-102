@@ -8,8 +8,8 @@ namespace ComputerModulo8.computer
     class ComputerClient
     {
         public static ComputerVisionClient clienteComputer { get; set; }
-        private static string endpoint = "https://computerenvef.cognitiveservices.azure.com/";
-        private static string apiKey = "c335ea0982e543719821285136e137f4";
+        private static string endpoint = "https://compvisionleao.cognitiveservices.azure.com/";
+        private static string apiKey = "f8d5bad6a1ac4e6ba2d685435258b2ea";
         static ComputerClient()
         {
             Console.WriteLine("inicializando Cliente Computer");
